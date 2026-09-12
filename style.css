@@ -1,0 +1,257 @@
+/* =========================================
+   Variáveis de Cores e Estilos Gerais
+========================================= */
+:root {
+    --cor-primaria: #1E3A8A; /* Azul escuro */
+    --cor-secundaria: #F97316; /* Laranja (destaques e botões) */
+    --cor-fundo: #F3F4F6; /* Cinza bem claro */
+    --cor-texto: #374151; /* Cinza escuro para leitura agradável */
+    --cor-branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+/* =========================================
+   Cabeçalho e Navegação
+========================================= */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* =========================================
+   Conteúdo Principal
+========================================= */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Seção Destaques (Hero) */
+#destaques {
+    background-color: var(--cor-branco);
+    text-align: center;
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 4rem;
+}
+
+#destaques h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+#destaques p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#destaques a {
+    display: inline-block;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#destaques a:hover {
+    background-color: #EA580C;
+}
+
+/* =========================================
+   Vitrine de Produtos (Agora com Fundo Branco)
+========================================= */
+#produtos {
+    background-color: var(--cor-branco); /* Fundo branco igual ao destaques */
+    padding: 4rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 4rem;
+    
+    /* Mantemos o Grid aqui */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+#produtos h2 {
+    grid-column: 1 / -1; /* Força o título a ocupar toda a largura da tela/container */
+    text-align: center;
+    font-size: 2.5rem; /* Tamanho igual ao "Destaques" */
+    color: var(--cor-primaria);
+    margin-bottom: 1rem; /* Espaçamento ajustado */
+}
+
+/* Cards dos Produtos */
+article {
+    background-color: var(--cor-branco);
+    border: 1px solid #E5E7EB; /* Bordinha para destacar o card no fundo que agora é branco */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column; 
+}
+
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    aspect-ratio: 4/3; 
+    object-fit: cover;
+    background-color: #E5E7EB; 
+    margin-bottom: 1rem;
+}
+
+article h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-primaria);
+}
+
+article p {
+    margin-bottom: 1rem;
+    flex-grow: 1; 
+}
+
+article strong {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 1.5rem;
+}
+
+article button {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+article button:hover {
+    background-color: #1E40AF;
+}
+
+/* =========================================
+   Sobre Nós
+========================================= */
+#sobre {
+    background-color: var(--cor-branco);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#sobre h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#sobre ul {
+    list-style-position: inside;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+#sobre li {
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto);
+}
+
+/* =========================================
+   Rodapé
+========================================= */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer address {
+    font-style: normal;
+    margin-bottom: 1rem;
+}
+
+footer address p {
+    margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   Responsividade (Telas pequenas)
+========================================= */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #destaques h2, #produtos h2 {
+        font-size: 2rem;
+    }
+}
